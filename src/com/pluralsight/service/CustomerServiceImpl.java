@@ -8,16 +8,23 @@ import org.springframework.stereotype.Service;
 import com.pluralsight.model.Customer;
 import com.pluralsight.repository.CustomerRepository;
 
-@Service("customerService")
+//@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
-	
 	@Autowired
 	private CustomerRepository customerRepository;
 	/* (non-Javadoc)
 	 * @see com.pluralsight.service.CustomerService#findAll()
 	 */
+	
 	@Override
 	public List<Customer> findAll(){
 		return customerRepository.findAll();
 	}
+	public CustomerRepository getCustomerRepository() {
+		return customerRepository;
+	}
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+	
 }
