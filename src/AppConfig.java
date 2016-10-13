@@ -12,7 +12,7 @@ import com.pluralsight.service.CustomerServiceImpl;
 
 @Configuration
 @ComponentScan({"com.pluralsight"})
-@PropertySource("app.properties") //com/pluralsight/model/app.properties
+@PropertySource("app.properties") // src/app.properties
 public class AppConfig {
 
 	@Bean
