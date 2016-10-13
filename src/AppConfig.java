@@ -21,7 +21,7 @@ public class AppConfig {
 	}
 	
 	@Bean(name="customerService")
-	@Scope("singleton")
+	//@Scope("singleton")
 	public CustomerService getCustomerService() {  // can comment this method out if using @Service("customerService") on class CustomerServiceImpl
 		CustomerServiceImpl customerService = new CustomerServiceImpl();
 		
